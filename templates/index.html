@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1> Moje CV </h1>
+<p> Hmm, chyba się udało :-) </p>
+
+<div class="row">
+  <div class="col-3">
+    <img src="{{ url_for('static', filename='/img/android-chrome-192x192.png') }}">
+   </div>
+  <div class="col-8">
+    <p>Marcin Szlaz</p>
+  </div>
+</div>
+<div class="card border border-warning-subtle" style="width: 18rem;">
+	<img class="card-img-top" src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="Moje zdjęcie">
+    <div class="card-body">
+    <h5 class="card-title">Marcin Szlaz</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="https://github.com/marcinszlaz" class="btn btn-warning">GitRepo</a>
+  </div>
+</div>
+
+{% endblock %}

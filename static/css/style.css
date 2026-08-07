@@ -1,0 +1,16 @@
+body {
+    background-color: #333333; /* Ciemny grafit z Vima */
+    color: #ffdead;           /* Piaskowy kolor tekstu */
+    font-family: monospace;   /* Czcionka o stałej szerokości (jak w terminalu) */
+}
+a {
+    color: #87ceeb; /* Jasny błękit, często używany w Vimie na linki/nazwy */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+div {
+	border: 2px solid green;
+}

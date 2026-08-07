@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content  %}
+
+<div class="container justify-content-center">
+	<div class="row">
+		<div class="col justify-content-left"
+		style="border:1px solid red;">
+			<p>Column1</p>
+		</div>
+		
+		<div class="col justify-content-center"
+		style="border:1px solid red;">
+			<p>Column2</p>
+		</div>
+		
+		<div class="col d-flex justify-content-right"
+		style="border:1px solid red height:200px;">
+			<div class="vr"></div>
+			<p>Column3</p>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
+
