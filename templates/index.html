@@ -1,24 +1,97 @@
+<!--
+--BOOTSTRAP v5.X CHEATSHEET--
+
+Basics div class:
+- container, row, col, col-[1..12] {col-2, col10, col8, col4} Ecol = always 12
+
+Padding / margines:
+- mt-[1..5]/auto - margines top,
+- my-[1..5]/auto - margines y-axis (both top and bottom),
+- mx-[1..5]/auto - margines left/right,
+- pt-[1..5]/auto - padding top,
+- py-[1..5]/auto - padding y-axis,
+- px-[1..5]/auto - padding left/right,
+- p-auto / m-auto - all in one,
+Images:
+- img-fluid - responsiveness,
+- rounded - rounded :-),
+- rounded-pill / rounded-circle - good for avatars,
+- img-thumbnail - nice border,
+- d-block m-auto or mx-auto - centered image
+- align-items-center / justify-content-center - centered image
+-->
 {% extends 'base.html' %}
-
 {% block content %}
-<h1> Moje CV </h1>
-<p> Hmm, chyba się udało :-) </p>
+<div class="container rounded-3 w-100 h-auto my-5 mx-auto " style="border: 2px solid #87ceeb;">
+    <!-- first row div -->
+    <div class="row">
+        <!-- first row, first column, beautiful photography -->
+        <div class="col-sm-4 col-md-4 col-lg-4 p-3" style="border: {{ borders }}px solid purple;">
+            <img src="{{ url_for('static', filename='/img/android-chrome-192x192.png') }}"
+            class="img-fluid img-thumbnail rounded-pill d-block m-auto">
+        </div>
+        <!-- first column end -->
 
-<div class="row">
-  <div class="col-3">
-    <img src="{{ url_for('static', filename='/img/android-chrome-192x192.png') }}">
-   </div>
-  <div class="col-8">
-    <p>Marcin Szlaz</p>
-  </div>
+        <!-- first row, second column, name, title -->
+        <div class="col-sm-8 col-md-8 col-lg-8" style="border: {{ borders }}px solid purple;">
+            <div class="d-flex flex-column align-items-center justify-content-center p-5 ">
+                <h1>Roman J. Blazkowitz</h1>
+                <span>Network Engineer & Software Developer</span>
+            </div>
+        </div>
+        <!-- second column end -->
+        <div class="col-sm-4 col-md-4 col-lg-4 py-3 d-flex flex-column justify-content-start" style="border: {{ borders }}px solid purple;">
+            <ul  type="None" class="">
+                <li class=""><span>Contact:</span></li>
+                    <ul type="circle" class="">
+                        <li><i class="bi bi-telephone-fill"> </i>(0-69) 696-696-696</li>
+                        <li><i class="bi bi-geo-alt"> </i>Earth, USA</li>
+                        <li><i class="bi bi-envelope-at-fill"> </i>romanblazkowitz@gmail.com</li>
+                        <li><i class="bi bi-stars"></i> <a href="https://github.com/marcinszlaz" target="blank_">Github repository</a></li>
+                    </ul>
+                <li><span>Education:</span></li>
+                    <ul type="circle">
+                        <li>Intergalactic Marine Corps Academy</li>
+                    </ul>
+                <li><span>Skills:</span></li>
+                    <ul type="circle">
+                        <li>Python</li>
+                        <li>SQL</li>
+                            <ul type="circle">
+                                <li>MySQL</li>
+                                <li>sqlite</li>
+                            </ul>
+                        <li>HTML/CSS</li>
+                        <li>Network</li>
+                            <ul type="circle">
+                                <li>Cisco</li>
+                                <li>Microtik</li>
+                            </ul>
+                        <li>git/docker</li>
+                        <li>Linux</li>
+                    </ul>
+                <li><span>Languages:</span></li>
+                    <ul type="circle">
+                        <li>English</li>
+                        <li>German</li>
+                    </ul>
+            </ul>
+        </div>
+        <div class="col-sm-8 col-md-8 col-lg-8 p-3 d-flex flex-column align-items-center" style="border: {{ borders }}px solid purple;">
+            <h3>About me</h3>
+            <p>My hobby is killing horned daemons and other beasts from hell.<br/>
+               I can easily handle with ordinary enemies as well. Long story short<br/>
+               I'll solve your problems quickly and very painful (for problems ;)).</p>
+            <h3>Experiance</h3>
+            <p>I have a lot of experience with endless fight between good and evil.<br/>
+                I'm strongly familiar with wide spectrum of weapons, mass destruction<br/>
+                weapons included. My motto is - "Good Bug is Dead Bug" ;-).</p>
+            <h3>Mission</h3>
+            <p>Like anyone I have mission too. My only purpose in life is constantly<br/>
+               bringing the eternal pain for all misbehaving hardware and software. <br/>
+               Besides that my own endless pain of life is my highest virtue.</p>
+        </div>
+    </div>
 </div>
-<div class="card border border-warning-subtle" style="width: 18rem;">
-	<img class="card-img-top" src="{{ url_for('static', filename='img/android-chrome-512x512.png') }}" alt="Moje zdjęcie">
-    <div class="card-body">
-    <h5 class="card-title">Marcin Szlaz</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://github.com/marcinszlaz" class="btn btn-warning">GitRepo</a>
-  </div>
-</div>
-
 {% endblock %}
+

@@ -4,13 +4,14 @@ body {
     font-family: monospace;   /* Czcionka o stałej szerokości (jak w terminalu) */
 }
 a {
-    color: #87ceeb; /* Jasny błękit, często używany w Vimie na linki/nazwy */
+    color: #ffdead; /* #87ceeb Jasny błękit, często używany w Vimie na linki/nazwy */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
 }
+
 div {
-	border: 2px solid green;
+	/* border: 2px solid green; */
 }
