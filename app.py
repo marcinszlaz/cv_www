@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from flask import Flask, request, url_for, render_template
 from markupsafe import escape, Markup
 
@@ -13,6 +14,6 @@ def grid():
     return render_template("grid.html")
 
 if __name__ == "main":
-    app.run(debug=True, host="0.0.0.0", port=80)
+    app.run(debug=True, host="0.0.0.0", port=5015)
 
 
