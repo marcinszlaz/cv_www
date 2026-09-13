@@ -24,3 +24,4 @@
 * * `docker-compose up -d --build` - in case you run docker-compose file with reverse proxy (nginx)
 * `docker-compose up -d` after first build, -d - detached,
 * `docker-compose logs -f` real time logs from running containers
+* `docker inspect <container_number> > file.json` - save docker status into file
